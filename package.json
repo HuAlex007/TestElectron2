@@ -1,27 +1,26 @@
 {
   "name": "electron2",
   "version": "1.0.0",
-  "description": "electron2",
+  "description": "eletron2",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."	
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HuAlex007/TestElectron2.git"
   },
-  "author": "AlexHu",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/HuAlex007/TestElectron2/issues"
   },
+  "homepage": "https://github.com/HuAlex007/TestElectron2#readme",
   "devDependencies": {
-    "electron": "^8.2.0",
-    "electron-packager": "^14.2.1"
+    "electron": "^8.2.0"
   },
   "dependencies": {
-    "electron-log": "^4.1.1",
-    "update-electron-app": "^1.5.0"
+    "electron-log": "^4.1.1"
   }
 }

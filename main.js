@@ -1,4 +1,5 @@
-const { app, BrowserWindow,autoUpdater, dialog } = require('electron')
+const { app, BrowserWindow } = require('electron')
+
 function createWindow () {   
   // 创建浏览器窗口
   const win = new BrowserWindow({
@@ -43,9 +44,5 @@ app.on('activate', () => {
 
 //alex hu
 //require('update-electron-app')()
-require('update-electron-app')({
-		  repo: 'https://github.com/HuAlex007/TestElectron2.git',
-		  updateInterval: '6 minutes',
-		  logger: require('electron-log')
-})
+
 
