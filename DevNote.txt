@@ -4,3 +4,32 @@ https://github.com/HuAlex007/TestElectron2.git
 ==CMD Line
 npm install --save-dev electron
 npm install electron-log
+npm install update-electron-app
+npm install electron-is-dev
+
+==update code
+require('update-electron-app')({
+		  repo: 'HuAlex007/https://github.com/HuAlex007/TestElectron2.git',
+		  updateInterval: '6 minutes',
+		  logger: require('electron-log')
+})
+
+==Doc
+https://www.electronjs.org/docs/tutorial/quick-start
+==Update
+https://www.electronjs.org/docs/tutorial/updates
+==distribution
+https://www.electronjs.org/docs/tutorial/application-distribution
+
+==npm cache clean --force
+==package
+npm install electron-packager --save-dev
+"packagerWin64": "electron-packager ./ 'app1' --platform=win32 --arch=x64 --out ./project ",
+==asar app
+asar pack appV1.exe  app.asar
+
+
+
+
+
+
