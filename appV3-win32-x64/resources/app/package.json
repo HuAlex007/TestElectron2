@@ -21,6 +21,7 @@
     "electron": "^8.2.0"
   },
   "dependencies": {
-    "electron-log": "^4.1.1"
+    "electron-log": "^4.1.1",
+    "electron-squirrel-startup": "^1.0.0"
   }
 }

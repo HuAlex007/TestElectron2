@@ -41,10 +41,34 @@ app.on('activate', () => {
 // In this file you can include the rest of your app's specific main process
 // code. 也可以拆分成几个文件，然后用 require 导入。
 
-//alex hu
+//alex hu================================================
 //require('update-electron-app')()
 //https://test-electron2.hualex007.now.sh/
 const server = "https://test-electron2.now.sh/"
 const feed = `${server}/update/${process.platform}/${app.getVersion()}`
 autoUpdater.setFeedURL(feed)
 
+//JavaScript
+//每分钟检查一次
+setInterval(() => {
+    autoUpdater.checkForUpdates()
+}, 60000)
+//update-downloaded
+autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
+  const dialogOpts = {
+    type: 'info',
+    buttons: ['Restart', 'Later'],
+    title: 'Application Update',
+    message: process.platform === 'win32' ? releaseNotes : releaseName,
+    detail: 'A new version has been downloaded. Restart the application to apply the updates.'
+  }
+
+  dialog.showMessageBox(dialogOpts).then((returnValue) => {
+    if (returnValue.response === 0) autoUpdater.quitAndInstall()
+  })
+})
+//JavaScript
+autoUpdater.on('error', message => {
+    console.error('There was a problem updating the application')
+    console.error(message)
+})
