@@ -43,7 +43,8 @@ app.on('activate', () => {
 
 //alex hu
 //require('update-electron-app')()
-const server = "https://test-electron2-juedjfjld.now.sh/"
-const feed = '${server}/update/${process.platform}/${app.getVersion()}'
+//https://test-electron2.hualex007.now.sh/
+const server = "https://test-electron2.now.sh/"
+const feed = `${server}/update/${process.platform}/${app.getVersion()}`
 autoUpdater.setFeedURL(feed)
 
