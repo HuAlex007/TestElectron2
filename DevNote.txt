@@ -29,10 +29,15 @@ npm install electron-packager --save-dev
 asar pack appV1.exe  app.asar
 ==now install
 npm install -g now
-
+==now login
 ==now code 1
 now -e ACCOUNT="HuAlex007" -e REPOSITORY="TestElectron2"
 
 ==https://zeit.co/download
-
+==https://github.com/zeit/hazel
+==
+const { app, autoUpdater } = require('electron')
+const server = <your-deployment-url>
+const feed = `${server}/update/${process.platform}/${app.getVersion()}`
+autoUpdater.setFeedURL(feed)
 

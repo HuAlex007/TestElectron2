@@ -1,5 +1,4 @@
-const { app, BrowserWindow } = require('electron')
-
+const { app, BrowserWindow, autoUpdater } = require('electron')
 function createWindow () {   
   // 创建浏览器窗口
   const win = new BrowserWindow({
@@ -44,5 +43,7 @@ app.on('activate', () => {
 
 //alex hu
 //require('update-electron-app')()
-
+const server = "https://test-electron2-juedjfjld.now.sh/"
+const feed = '${server}/update/${process.platform}/${app.getVersion()}'
+autoUpdater.setFeedURL(feed)
 
