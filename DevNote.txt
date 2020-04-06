@@ -33,11 +33,12 @@ npm install -g now
 ==now code 1
 now -e ACCOUNT="HuAlex007" -e REPOSITORY="TestElectron2"
 
+==Clone hazel
 ==https://zeit.co/download
 ==https://github.com/zeit/hazel
-==
+==Add Code to Main.js
 const { app, autoUpdater } = require('electron')
-const server = <your-deployment-url>
+const server = https://test-electron2-juedjfjld.now.sh/
 const feed = `${server}/update/${process.platform}/${app.getVersion()}`
 autoUpdater.setFeedURL(feed)
 
