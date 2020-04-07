@@ -1,4 +1,4 @@
-const { app, BrowserWindow, autoUpdater } = require('electron')
+const { app, BrowserWindow, autoUpdater, dialog } = require('electron')
 function createWindow () {   
   // 创建浏览器窗口
   const win = new BrowserWindow({
@@ -13,7 +13,7 @@ function createWindow () {
   win.loadFile('index.html')
 
   // 打开开发者工具
-  win.webContents.openDevTools()
+  //win.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
@@ -44,15 +44,17 @@ app.on('activate', () => {
 //alex hu================================================
 //require('update-electron-app')()
 //https://test-electron2.hualex007.now.sh/
-const server = "https://test-electron2.now.sh/"
+const server = "https://test-electron2.now.sh"
 const feed = `${server}/update/${process.platform}/${app.getVersion()}`
 autoUpdater.setFeedURL(feed)
-
+			//https://test-electron2.now.sh//update/win32/1.0.8
 //JavaScript
 //每分钟检查一次
 setInterval(() => {
     autoUpdater.checkForUpdates()
+	console.error('checkForUpdates')
 }, 60000)
+
 //update-downloaded
 autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
   const dialogOpts = {
@@ -62,7 +64,6 @@ autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
     message: process.platform === 'win32' ? releaseNotes : releaseName,
     detail: 'A new version has been downloaded. Restart the application to apply the updates.'
   }
-
   dialog.showMessageBox(dialogOpts).then((returnValue) => {
     if (returnValue.response === 0) autoUpdater.quitAndInstall()
   })
