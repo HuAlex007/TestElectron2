@@ -47,8 +47,10 @@ npm install electron-squirrel-startup
 npm install -g grunt-cli
 
 
-
-
+==1. packager
+electron-packager ./ appV3
+==2. build (config 2 files )
+grunt
 
 
 

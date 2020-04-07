@@ -13,7 +13,7 @@ grunt.config.init({
             exe:'appV3.exe',
             description:'appV3',
             setupIcon:"./assets/1.ico",
-            noMsi:false
+            noMsi:true
         }
     }
 });
