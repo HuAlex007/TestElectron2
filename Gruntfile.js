@@ -8,7 +8,7 @@ grunt.config.init({
             version:'2.0.6',
             authors:'AlexHu',
             projectUrl:'',
-            appDirectory:'./electron2-win32-x64 --platform=win32 --arch=x64 ',//要打包的输入目录
+            appDirectory:'./project/electron2-win32-x64',//要打包的输入目录
             outputDirectory:'./OutPut/exePath',//grunt打包后的输出目录
             exe:'electron2.exe',
             description:'electron2',
