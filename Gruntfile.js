@@ -8,10 +8,10 @@ grunt.config.init({
             version:'2.0.6',
             authors:'AlexHu',
             projectUrl:'',
-            appDirectory:'./appV3-win32-x64',//要打包的输入目录
+            appDirectory:'./electron2-win32-x64',//要打包的输入目录
             outputDirectory:'./OutPut',//grunt打包后的输出目录
-            exe:'appV3.exe',
-            description:'appV3',
+            exe:'electron2.exe',
+            description:'electron2',
             setupIcon:"./assets/1.ico",
             noMsi:true
         }

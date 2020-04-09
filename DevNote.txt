@@ -64,14 +64,19 @@ https://github.com/HuAlex007/TestElectron2/download
 releases/download/V2.0.5/2.exe
 
 ==Plan B
-1. npm install electron-builder --save-dev
-2. npm install electron-builder-squirrel-windows
+1. npm install 
+2. npm install electron-builder --save-dev
+electron-builder-squirrel-windows
+3. add build content
+3. add ico
+2. add disk in scripts
 2. npm run dist
 
+"postinstall": "electron-builder install-app-deps"
 
 
-
-
+"pack": "electron-builder --dir",
+  "dist": "electron-builder"
 
 
 
