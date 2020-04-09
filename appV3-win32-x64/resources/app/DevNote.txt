@@ -32,7 +32,8 @@ npm install -g now
 ==now login
 ==now code 1
 now -e ACCOUNT="HuAlex007" -e REPOSITORY="TestElectron2"
-
+now -e ACCOUNT="dbklabs" -e REPOSITORY="macflix" -e TOKEN="<my token>" -e URL=NOW_URL
+now -e ACCOUNT="HuAlex007" -e REPOSITORY="TestElectron2" -e TOKEN="f0f120ae771efdaa98a83ad26c17e01e0cced9a2" -e URL="https://api.github.com/repos/HuAlex007/TestElectron2/releases?access_token=f0f120ae771efdaa98a83ad26c17e01e0cced9a2"
 ==Clone hazel
 ==https://zeit.co/download
 ==https://github.com/zeit/hazel
@@ -56,5 +57,9 @@ grunt
 
 
 
+https://test-electron2.hualex007.now.sh/update/win32/
 
+https://github.com/HuAlex007/TestElectron2/releases/download/V2.0.5/2.exe
+https://github.com/HuAlex007/TestElectron2/download
+releases/download/V2.0.5/2.exe
 
