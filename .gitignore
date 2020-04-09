@@ -1,5 +1,6 @@
 .now
 node_modules
 appV3-win32-x64
+Electron3-win32-x64
 OutPut
 .gitignore
