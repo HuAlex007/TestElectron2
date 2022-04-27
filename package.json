@@ -24,7 +24,7 @@
     "electron-packager": "^14.2.1",
     "electron-squirrel-startup": "^1.0.0",
     "electron-winstaller": "^4.0.0",
-    "grunt": "^1.1.0",
+    "grunt": "^1.5.2",
     "grunt-electron-installer": "^2.1.0"
   },
   "dependencies": {
